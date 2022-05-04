@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  card-deck-manager:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    network_mode:
+      host
+    depends_on:
+      - redis-storage
+
+  redis-storage:
+    image: "redis:7.0.0-alpine"
+    network_mode:
+      host
+
+
