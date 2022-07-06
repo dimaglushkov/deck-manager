@@ -8,13 +8,6 @@ but in case of this problem I believe that is overengineering.
 
 To store data I decided to use Redis as the key-value storage. Relational databases surely could be used too. Chosen architecture allows to easily switch from one storage to another. To do that it's necessary to implement class which satisfies [Repository interface](/internal/repository.go) and inject it into the handler in [main.go](/cmd/main.go)
 
-## Known problems / uncertainties
-1. I'm not sure if opening the deck should lead to drawing all the cards from it or just return info about the deck without actually changing it. I've implemented the second scenario.
-2. No behaviour description was provided for overdraft, thus I assumed that if num of cards to draft is bigger than amount of remaining cards, app should just draw the whole deck without an error.
-3. No behaviour description was provided for empty decks:
-   1. I assumed that it's illegal to create empty deck
-   2. I assumed that app should not remove deck after all its card were drown.
-
 ## Tests
 ### Unit tests
 To run unit tests run following command from the root of this repository
