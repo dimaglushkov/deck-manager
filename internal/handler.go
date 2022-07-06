@@ -9,7 +9,7 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/dimaglushkov/toggl-test-assignment/internal/models"
+	"github.com/dimaglushkov/deck-manager/internal/models"
 )
 
 type handler struct {

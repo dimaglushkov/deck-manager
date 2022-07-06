@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/dimaglushkov/toggl-test-assignment/internal/models"
+	"github.com/dimaglushkov/deck-manager/internal/models"
 )
 
 const host, port = "127.0.0.1", "6379"

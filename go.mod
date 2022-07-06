@@ -1,4 +1,4 @@
-module github.com/dimaglushkov/toggl-test-assignment
+module github.com/dimaglushkov/deck-manager
 
 go 1.18
 

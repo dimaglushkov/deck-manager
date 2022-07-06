@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"os"
 
-	app "github.com/dimaglushkov/toggl-test-assignment/internal"
-	"github.com/dimaglushkov/toggl-test-assignment/internal/repositories/redis"
+	app "github.com/dimaglushkov/deck-manager/internal"
+	"github.com/dimaglushkov/deck-manager/internal/repositories/redis"
 )
 
 func run() error {

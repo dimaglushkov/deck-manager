@@ -7,8 +7,8 @@ import (
 	"github.com/gomodule/redigo/redis"
 	"github.com/google/uuid"
 
-	. "github.com/dimaglushkov/toggl-test-assignment/internal"
-	"github.com/dimaglushkov/toggl-test-assignment/internal/models"
+	. "github.com/dimaglushkov/deck-manager/internal"
+	"github.com/dimaglushkov/deck-manager/internal/models"
 )
 
 type Cache struct {
