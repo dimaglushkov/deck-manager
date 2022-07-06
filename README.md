@@ -1,7 +1,4 @@
-# toggl-test-assignment
-
-## Task
-[Toggl_Backend_Unattended_Programming_Test.pdf](Toggl_Backend_Unattended_Programming_Test.pdf)
+# deck-manager
 
 ## Solution description
 While designing this service, I tried to keep structure as simple as possible to keep code and structure easy-to-understand.
@@ -9,7 +6,7 @@ While designing this service, I tried to keep structure as simple as possible to
 For example, I think following hexagonal architecture would make this code way easier to extend (e.g. adding GRPc or replacing HTTP caller with something else),
 but in case of this problem I believe that is overengineering.
 
-To store data I decided to use Redis as the key-value storage. Relational databases surely could be used too. Chosen architecture allows to easily switch from one storage to another. To do that it's necessary to implement class which satisfies [Repository interface](/app/repository.go) and inject it into the handler in [main.go](/cmd/main.go)
+To store data I decided to use Redis as the key-value storage. Relational databases surely could be used too. Chosen architecture allows to easily switch from one storage to another. To do that it's necessary to implement class which satisfies [Repository interface](/internal/repository.go) and inject it into the handler in [main.go](/cmd/main.go)
 
 ## Known problems / uncertainties
 1. I'm not sure if opening the deck should lead to drawing all the cards from it or just return info about the deck without actually changing it. I've implemented the second scenario.
