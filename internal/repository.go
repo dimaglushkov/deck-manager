@@ -1,9 +1,11 @@
-package app
+package internal
 
 import (
 	"fmt"
-	"github.com/dimaglushkov/toggl-test-assignment/app/models"
+
 	"github.com/google/uuid"
+
+	"github.com/dimaglushkov/toggl-test-assignment/internal/models"
 )
 
 type Repository interface {

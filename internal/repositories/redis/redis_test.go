@@ -1,10 +1,13 @@
 package redis
 
 import (
-	"github.com/dimaglushkov/toggl-test-assignment/app/models"
+	"testing"
+
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
-	"testing"
+	"github.com/stretchr/testify/require"
+
+	"github.com/dimaglushkov/toggl-test-assignment/internal/models"
 )
 
 const host, port = "127.0.0.1", "6379"
@@ -20,7 +23,7 @@ func TestCache_New(t *testing.T) {
 	assert.ErrorContains(t, err, "connection")
 
 	cache, err = New(host, port)
-	assert.NoErrorf(t, err, "To run these test start redis instance at %s:%s", host, port)
+	require.NoErrorf(t, err, "To run these test start redis instance at %s:%s", host, port)
 }
 
 func TestCache(t *testing.T) {

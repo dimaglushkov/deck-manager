@@ -2,9 +2,10 @@ package models
 
 import (
 	"fmt"
-	"github.com/google/uuid"
 	"math/rand"
 	"time"
+
+	"github.com/google/uuid"
 )
 
 const numOfCards = 52

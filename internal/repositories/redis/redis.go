@@ -3,10 +3,12 @@ package redis
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/dimaglushkov/toggl-test-assignment/app"
-	"github.com/dimaglushkov/toggl-test-assignment/app/models"
+
 	"github.com/gomodule/redigo/redis"
 	"github.com/google/uuid"
+
+	. "github.com/dimaglushkov/toggl-test-assignment/internal"
+	"github.com/dimaglushkov/toggl-test-assignment/internal/models"
 )
 
 type Cache struct {
@@ -58,7 +60,7 @@ func (c *Cache) Get(uuid uuid.UUID) (*models.Deck, error) {
 	}
 
 	if deckDataJSON == nil || len(deckDataJSON.([]byte)) == 0 {
-		return nil, app.NewUnknownUUIDError(uuid)
+		return nil, NewUnknownUUIDError(uuid)
 	}
 
 	var deck models.Deck

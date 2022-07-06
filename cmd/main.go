@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"github.com/dimaglushkov/toggl-test-assignment/app"
-	"github.com/dimaglushkov/toggl-test-assignment/repositories/redis"
 	"log"
 	"net/http"
 	"os"
+
+	app "github.com/dimaglushkov/toggl-test-assignment/internal"
+	"github.com/dimaglushkov/toggl-test-assignment/internal/repositories/redis"
 )
 
 func run() error {
@@ -30,6 +31,5 @@ func run() error {
 func main() {
 	if err := run(); err != nil {
 		log.Fatalf("error while running the app: %s", err.Error())
-
 	}
 }

@@ -1,13 +1,15 @@
-package app
+package internal
 
 import (
 	"encoding/json"
-	"github.com/dimaglushkov/toggl-test-assignment/app/models"
-	"github.com/google/uuid"
 	"net/http"
 	"net/url"
 	"strconv"
 	"strings"
+
+	"github.com/google/uuid"
+
+	"github.com/dimaglushkov/toggl-test-assignment/internal/models"
 )
 
 type handler struct {
